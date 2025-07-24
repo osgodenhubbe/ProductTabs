@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View\Description"
+                   name="product.info.product_declaration"
+                   as="product_declaration"
+                   template="Magento_Catalog::product/view/attribute.phtml"
+                   group="detailed_info">
+                <arguments>
+                    <!-- the tab label -->
+                    <argument name="title" xsi:type="string" translate="true">
+                        Varedeklaration
+                    </argument>
+                    <!-- method on the Product model -->
+                    <argument name="at_call" xsi:type="string">
+                        getProductDeclaration
+                    </argument>
+                    <!-- attribute code in DB -->
+                    <argument name="at_code" xsi:type="string">
+                        product_declaration
+                    </argument>
+                    <!-- tab sort order -->
+                    <argument name="sort_order" xsi:type="number">50</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>
